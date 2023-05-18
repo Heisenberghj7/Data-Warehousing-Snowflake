@@ -5,7 +5,7 @@
 -- Step 1: Assign row numbers to each record within its partition
 WITH deduplicated AS (
   SELECT
-    ROW_NUMBER() OVER (PARTITION BY BE20, "Famille_met", "metier", "Dept" ORDER BY BE20) AS row_num,
+    ROW_NUMBER() OVER (PARTITION BY BE20, "Famille_met", "metier", "Dept","met","xmet","smet" ORDER BY BE20) AS row_num,
     *
   FROM BMO.PUBLIC."main_oeuvre"
 ),
