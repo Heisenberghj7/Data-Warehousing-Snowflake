@@ -6,7 +6,7 @@
 WITH duplicates AS (
   SELECT
     *,
-    COUNT(*) OVER (PARTITION BY BE20, "Famille_met", "metier", "Dept" ) AS duplicate_count
+    COUNT(*) OVER (PARTITION BY BE20, "Famille_met", "metier", "Dept","met","xmet","smet" ) AS duplicate_count
   FROM BMO.PUBLIC."main_oeuvre"
 ),
 
