@@ -17,7 +17,7 @@ cleaned_data AS (
 )
 
 SELECT *
-FROM cleaned_data;
+FROM cleaned_data
 
 
 
